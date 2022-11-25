@@ -1,0 +1,53 @@
+{
+  "version": "2.0.0",
+  "tasks":
+  [
+    {
+      "label": "Debug Build",
+      "type": "shell",
+      "command": ".vscode/tasks/Build.sh",
+      "args": ["Debug"],
+      "problemMatcher": { "base": "$gcc", "fileLocation": "absolute" },
+      "presentation": { "echo": false, "showReuseMessage": false, "revealProblems": "onProblem" },
+      "group": { "kind": "build" }
+    },
+    {
+      "label": "Release Build",
+      "type": "shell",
+      "command": ".vscode/tasks/Build.sh",
+      "args": ["Release"],
+      "problemMatcher": { "base": "$gcc", "fileLocation": "absolute" },
+      "presentation": { "echo": false, "showReuseMessage": false, "revealProblems": "onProblem" },
+      "group": { "kind": "build" }
+    },
+    {
+      "label": "Clean",
+      "type": "shell",
+      "command": ".vscode/tasks/Clean.sh",
+      "presentation": { "echo": false, "showReuseMessage": false },
+      "group": { "kind": "build" }
+    },
+    {
+      "label": "Configure CMake",
+      "type": "shell",
+      "command": ".vscode/tasks/ConfigureCmake.sh",
+      "args": [ ".vscode/mingw-windows.cmake" ],
+      "presentation": { "echo": false, "showReuseMessage": false },
+      "group": { "kind": "build" }
+    },
+    {
+      "label": "Count Lines of C/C++ Code",
+      "type": "shell",
+      "command": ".vscode/tasks/CountLines.sh",
+      "presentation": { "echo": false, "showReuseMessage": false }
+    },
+    {
+      "label": "View File Assembly",
+      "type": "shell",
+      "command": ".vscode/tasks/ViewAssembly.sh",
+      "args": [ "'${file}'" ],
+      "problemMatcher": { "base": "$gcc", "fileLocation": "absolute" },
+      "presentation": { "echo": false, "showReuseMessage": false }
+    }
+  ]
+}

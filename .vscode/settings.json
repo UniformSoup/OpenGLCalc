@@ -1,0 +1,21 @@
+{
+    "terminal.integrated.profiles.windows":
+    {
+        "MINGW64":
+        {
+            "path": "C:/msys64/usr/bin/bash.exe",
+            "env":
+            {
+                "CHERE_INVOKING": "1",
+                "MSYSTEM": "MINGW64",
+                // THE FOLLOWING IS A HACK TO PLACE THE MSYS PATHS BEFORE THE WINDOWS ONES
+                "PATH": "/mingw64/bin;/usr/local/bin;/usr/bin;/bin;${env:PATH}"
+            },
+            "color": "terminal.ansiMagenta"
+        }
+    },
+    "terminal.integrated.defaultProfile.windows": "MINGW64",
+    "task.problemMatchers.neverPrompt": true,
+    "debug.onTaskErrors": "showErrors",
+    "explorer.copyRelativePathSeparator": "/"
+}
